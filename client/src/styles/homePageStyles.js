@@ -9,13 +9,14 @@ export const RedBackground = styled.div`
   left: 0%;
 `
 
-export const Header1 = styled.header`
-  font-size: 70px;
+export const Header1 = styled.div`
+  margin: 25px;
+  font-size: 90px;
   position: absolute;
   color: white;
   font-family: 'Montserrat', sans-serif;
-  left: 120px;
-  top: 90px;
+  left: 430px;
+  top: 70px;
   position: flex;
   filter: drop-shadow(3px 3px #3d3d3d );
   text-transform: uppercase;
@@ -23,7 +24,7 @@ export const Header1 = styled.header`
 
 export const ContentContainer = styled.div`
   position: absolute;
-  left: 350px;
+  left: 370px;
   top: 100px;
   filter: drop-shadow(3px 3px #3d3d3d );
 `

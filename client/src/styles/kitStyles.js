@@ -2,8 +2,13 @@ import styled from 'styled-components';
 
 export const ShowPara = styled.div`
   position: relative;
+<<<<<<< HEAD
   left: 450px;
   top: 10px;
+=======
+  left: 900px;
+  top: 270px;
+>>>>>>> 05ab35a (changes)
   font-family: 'Montserrat', sans-serif;
   color: #fe2712;
 `;
@@ -37,7 +42,6 @@ export const Grid = styled.div`
   justify-items: end;
   align-content: space-evenly;
   align-items: end;
-  border: solid white;
 `
 
 export const DarkBackground = styled.div`
