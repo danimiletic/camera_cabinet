@@ -1,11 +1,19 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+<<<<<<< HEAD
   bought: 2022-02-01 20:58:56
+=======
+  bought: 2022-02-01 19:48:08
+>>>>>>> f377903 (resolved confilcts)
   image: MyString
   gear: one
 
 two:
+<<<<<<< HEAD
   bought: 2022-02-01 20:58:56
+=======
+  bought: 2022-02-01 19:48:08
+>>>>>>> f377903 (resolved confilcts)
   image: MyString
   gear: two
