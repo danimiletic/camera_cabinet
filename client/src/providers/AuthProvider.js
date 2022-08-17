@@ -6,9 +6,10 @@ export const AuthContext = React.createContext();
 export const AuthConsumer = AuthContext.Consumer;
 
 const AuthProvider = ({ children }) => {
+
   const [user, setUser] = useState(null)
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const handleRegister = (user) => {
     axios.post('/api/auth', user)
@@ -20,7 +21,7 @@ const AuthProvider = ({ children }) => {
   }
 
   const handleLogin = (user) => {
-    axios.post("/api/auth/sign_in", user)
+    axios.post('/api/auth/sign_in', user)
       .then( res => {
         setUser(res.data.data)
         navigate('/')
@@ -29,7 +30,7 @@ const AuthProvider = ({ children }) => {
   }
 
   const handleLogout = () => {
-    axios.delete("/api/auth/sign_out")
+    axios.delete('/api/auth/sign_out')
     .then( res => {
       setUser(null)
       navigate('/')
@@ -37,18 +38,18 @@ const AuthProvider = ({ children }) => {
     .catch( err => console.log(err))
   }
 
-  const updateUser = (id, user) => {
-    let data = new FormData()
-    data.append('file', user.image)
-    data.append('name', user.name)
-    data.append('email', user.email)
-    axios.put(`/api/users/${id}`, data)
-    .then( res => {
-      setUser(res.data)
-      navigate('/register')
-    })
-    .catch( err => console.log(err))
-  }
+  // const updateUser = (id, user) => {
+  //   let data = new FormData()
+  //   data.append('file', user.image)
+  //   data.append('name', user.name)
+  //   data.append('email', user.email)
+  //   axios.put(`/api/users/${id}`, data)
+  //   .then( res => {
+  //     setUser(res.data)
+  //     navigate('/register')
+  //   })
+  //   .catch( err => console.log(err))
+  // }
 
   return (
     <AuthContext.Provider value={{
@@ -56,7 +57,7 @@ const AuthProvider = ({ children }) => {
       handleRegister: handleRegister,
       handleLogin: handleLogin, 
       handleLogout: handleLogout,
-      updateUser: updateUser,
+      // updateUser: updateUser,
       authenticated: user !== null, 
       setUser: (user) => setUser(user)
     }}>

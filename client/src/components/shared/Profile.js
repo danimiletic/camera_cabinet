@@ -10,21 +10,21 @@ import { Link } from 'react-router-dom';
 
 const Profile = ({ id, fname, lname, age, email, image, updateUser}) => {
 
-  const [user, setUser] = useState ({ fname: '', email: ''})
-  const [editing, setEdit] = useState(false)
+  // const [user, setUser] = useState ({ fname: '', email: ''})
+  // const [editing, setEdit] = useState(false)
 
-  useEffect( () => {
-    axios.get(`/api/auth/edit`)
-      .then( res => setUser(res.data))
-      .catch( err => console.log(err))
-  }, [])
+  // useEffect( () => {
+  //   axios.get(`/api/auth/edit`)
+  //     .then( res => setUser(res.data))
+  //     .catch( err => console.log(err))
+  // }, [])
 
 
 
 
   return (
 <>
-    { editing ? 
+    {/* { editing ? 
       <>
         <ProfileForm
           email={email}
@@ -36,25 +36,23 @@ const Profile = ({ id, fname, lname, age, email, image, updateUser}) => {
         <br />
       </>
       :
-      <>
+      <> */}
          <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={image} />
-      <Card.Body>
-        <Card.Title>User # {id} {fname} {lname}</Card.Title>
-        <Card.Text>
-          Age: {age}
-          <br />
-          Email: {email}
-        </Card.Text>
-        <Button 
+          <Card.Img variant="top" src={image} />
+          <Card.Body>
+            <Card.Title>User # {id} {fname} {lname}</Card.Title>
+            <Card.Text>
+              Age: {age}
+              <br />
+              Email: {email}
+            </Card.Text>
+            {/* <Button 
             variant="warning" 
             onClick={() => setEdit(true)}
-          >Edit Profile</Button>
-       
-      </Card.Body>
-    </Card>
-        </>
-      }
+            >Edit Profile</Button> */}
+          
+          </Card.Body>
+        </Card>
     </>
   )
 }
