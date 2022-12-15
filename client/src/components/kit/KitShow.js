@@ -27,7 +27,7 @@ const { name, description, image, item, id } = kit
 return (
 
   <>
-    <DarkBackground>
+    {/* <DarkBackground> */}
     { editing ? 
       <>
         <KitForm 
@@ -67,7 +67,7 @@ return (
       </>
       }
       <Gears kitId={id} />
-      </DarkBackground>
+      {/* </DarkBackground> */}
     </>
   )
 }

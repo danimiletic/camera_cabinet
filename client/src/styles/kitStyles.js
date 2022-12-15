@@ -2,13 +2,8 @@ import styled from 'styled-components';
 
 export const ShowPara = styled.div`
   position: relative;
-<<<<<<< HEAD
-  left: 450px;
-  top: 10px;
-=======
   left: 900px;
   top: 270px;
->>>>>>> 05ab35a (changes)
   font-family: 'Montserrat', sans-serif;
   color: #fe2712;
 `;
@@ -17,6 +12,7 @@ export const ShowPara = styled.div`
 export const MainContainer = styled.div`
   margin: 0 auto;
   max-width: 1280px;
+  min-height: 0;
 `;
 export const Font = styled.div`
   font-family: 'Montserrat', sans-serif;
@@ -30,53 +26,50 @@ export const WhiteFont = styled.div`
   font-family: 'Montserrat', sans-serif;
   color: white;
 `;
-export const Grid = styled.div`
-  margin: 12rem auto;
-
-  display: grid;
-  grid-template-columns: 37% 37%;
-  width: 1120px;
-  height: 200px;
-  margin-left: 220px;
-  margin-right: auto;
-  justify-items: end;
-  align-content: space-evenly;
-  align-items: end;
-`
-
-export const DarkBackground = styled.div`
-background: #292929;
-height: 100vh;
-width: 100%;
-overflow: hidden;
-position: absolute;
-left: 0%;
-`
-
 // export const Grid = styled.div`
+//   margin: 12rem auto;
 
-// `;
-// export const Row = styled.div`
-//   display: flex; 
+//   display: grid;
+//   grid-template-columns: 37% 37%;
+//   width: 1120px;
+//   height: 200px;
+//   margin-left: 220px;
+//   margin-right: auto;
+//   justify-items: end;
+//   align-content: space-evenly;
+//   align-items: end;
+// `
+
+export const Flex = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 10px;
+  margin: 15px;
+  overflow: auto;
+`;
+
+// export const DarkBackground = styled.div`
+//   background: #292929;
+//   height: 100vh;
+//   width: 100%;
+//   position: absolute;
+//   left: 0%;
 // `;
 
-// const media ={
-//   xs: (styles) => `
-//     @media only screen and (max-width: 480px){
-//       ${styles}
-//     }
-//   `,
-// }
-
-// export const Col = styled.div`
-//  flex: ${(props) => props.size};
-//  ${(props) => props.collapse && media[props.collapse](`
-//   display: none;
-//   `)}
-// `;
+export const Button = styled.button`
+  ${props => props.primary ? "#fe2712" : "#282c34"};
+  color: ${props => props.primary ? "#282c34" : "#fe2712"}
+  font-size: 1em;
+  margin: 1em;
+  padding: 0.25em 1em;
+  border: 2px solid #fe2712;
+  border-radius: 3px;
+`;
 
 export const Header1 = styled.div`
-  color: Black;
+  color: White;
   font-size: 40px;
   font-family: 'Montserrat', sans-serif;
   margin: 30px;
@@ -110,4 +103,4 @@ export const KitContainer = styled.div`
 
 export const FormContainer = styled.div`
   width: 50vw;
-`
+`;

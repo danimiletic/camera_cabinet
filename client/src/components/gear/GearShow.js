@@ -37,7 +37,7 @@ const GearShow = ({ updateGear, deleteGear }) => {
       <Button variant="warning" onClick={() => setEdit(true)}>
         Edit
       </Button>
-      <Button variant="danger" onClick={() => deleteGear(params.kitId, params.gameId)}>
+      <Button variant="danger" onClick={() => deleteGear(params.kitId, params.gearId)}>
         Delete
       </Button>
       

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-export const RedBackground = styled.div`
-  background: #E61F25;
+export const Background = styled.div`
+  background: #292929;
   height: 100vh;
   width: 100%;
   overflow: hidden;
@@ -9,25 +9,64 @@ export const RedBackground = styled.div`
   left: 0%;
 `
 
-export const Header1 = styled.div`
-  margin: 25px;
-  font-size: 90px;
+export const Header1 = styled.header`
+  font-size: 60px;
   position: absolute;
   color: white;
   font-family: 'Montserrat', sans-serif;
-  left: 430px;
-  top: 70px;
-  position: flex;
-  filter: drop-shadow(3px 3px #3d3d3d );
-  text-transform: uppercase;
+  left: 180px;
+  top: 90px;
+`
+
+export const Para = styled.p`
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  position: absolute;
+  top: 200px;
+  left: 190px;
+  font-size: 15px;
+  color: #828282;
 `
 
 export const ContentContainer = styled.div`
   position: absolute;
-  left: 370px;
+  left: 810px;
   top: 100px;
-  filter: drop-shadow(3px 3px #3d3d3d );
+`
+export const ContentContainer2 = styled.div`
+  position: absolute;
+  left: 650px;
+  top: 560px;
 `
 
-export const ImgContainer = styled.div`
-`
+
+// export const ImgContainer = styled.div`
+// `
+
+
+// MESSING WITH GRID 
+
+// export const Grid = styled.div`
+//   border: red solid 2px;
+// `;
+
+// export const Row = styled.div`
+//   display: flex;
+// `;
+
+// export const Col = styled.div`
+//   flex: ${(props) => props.size};
+//   ${(props) => props.collapse && media[props.collapse](`
+//     display: none;
+//   `)}
+//   border: green solid 2px;
+//   padding: 5px;
+// `;
+
+// const media = {
+//   xs: (styles) => `
+//     @media only screen and (max-width: 600px) {
+//       ${styles}
+//     }
+//   `,
+// }

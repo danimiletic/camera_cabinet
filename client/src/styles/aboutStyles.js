@@ -44,28 +44,27 @@ export const Header1 = styled.div`
   `
 
   export const Grid2 = styled.div`
-  
-  margin: auto;
- width: 50%;
- padding: 10px;
-  flex-grow: 1;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    flex-grow: 1;
   `
   
 
-export const Image1 = styled.div` {
-  
+export const Image1 = styled.div` {  
   &:hover {
     transition: .5s ease;
     opacity: 90%;
   } 
+
   &:hover ${Header1} {
     margin: auto;
- 
- padding: 10px;
+    padding: 10px;
     transition: .5s ease;
     opacity: 200%;
     color: #E61F25 ;
   }
+
   &:hover ${Header2} {
     transition: .5s ease;
     opacity: 200%;
@@ -74,19 +73,18 @@ export const Image1 = styled.div` {
 `
 
 export const Iborder = styled.div`
-float: left;
-width:  400px;
-height: 400px;
-object-fit: cover;
+  float: left;
+  width:  400px;
+  height: 400px;
+  object-fit: cover;
 `
   
 
  export const TopMargin = styled.div`
- margin: 5rem auto;
+  margin: 5rem auto;
  `
 
 export const Middle = styled.div`
-
   transition: .5s ease;
   opacity: 100%;
   text-color: #700000 ;

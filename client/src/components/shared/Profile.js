@@ -1,10 +1,10 @@
-import { useEffect, useState } from 'react';
+// import { useEffect, useState } from 'react';
 import { Card , Button} from 'react-bootstrap';
 import { AuthConsumer } from '../../providers/AuthProvider';
-import ProfileForm from './ProfileForm'
-import { useParams } from 'react-router';
-import axios from 'axios';
-import { Link } from 'react-router-dom';
+// import ProfileForm from './ProfileForm'
+// import { useParams } from 'react-router';
+// import axios from 'axios';
+// import { Link } from 'react-router-dom';
 
 
 
