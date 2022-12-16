@@ -26,10 +26,10 @@ const Kits = ({ kits, getAllKits, addKit }) => {
 										<>
 										<KitForm addKit={addKit} />
 										<br />
-										<Button primary onClick={() => setAdding(false)}>Cancel</Button>    
+										<Button onClick={() => setAdding(false)}>Cancel</Button>    
 										</>
 										:
-										<Button primary onClick={() => setAdding(true)}>Add Kit</Button>
+										<Button onClick={() => setAdding(true)}>Add Kit</Button>
 								}
 								<KitList kits={kits} />
 						</Container>

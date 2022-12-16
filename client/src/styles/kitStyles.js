@@ -58,15 +58,15 @@ export const Flex = styled.div`
 //   left: 0%;
 // `;
 
-export const Button = styled.button`
-  ${props => props.primary ? "#fe2712" : "#282c34"};
-  color: ${props => props.primary ? "#282c34" : "#fe2712"}
-  font-size: 1em;
-  margin: 1em;
-  padding: 0.25em 1em;
-  border: 2px solid #fe2712;
-  border-radius: 3px;
-`;
+// export const Button = styled.button`
+//   ${props => props.primary ? "#fe2712" : "#282c34"};
+//   color: ${props => props.primary ? "#282c34" : "#fe2712"}
+//   font-size: 1em;
+//   margin: 1em;
+//   padding: 0.25em 1em;
+//   border: 2px solid #fe2712;
+//   border-radius: 3px;
+// `;
 
 export const Header1 = styled.div`
   color: White;
@@ -90,10 +90,6 @@ export const Para1 = styled.div`
   left: 40px;
 `;
 
-export const Item = styled.div`
-
-`;
-
 export const KitContainer = styled.div`
   display: grid;
   justify-content: center;
@@ -104,3 +100,11 @@ export const KitContainer = styled.div`
 export const FormContainer = styled.div`
   width: 50vw;
 `;
+
+export const Button = styled.button`
+  background: #fe2712;
+  border-radius: 3px;
+  border: 1px solid white;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+`
