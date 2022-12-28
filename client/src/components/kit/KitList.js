@@ -1,38 +1,20 @@
 import { Link } from 'react-router-dom';
-
-import { Flex, Font, MainContainer, DarkBackground } from '../../styles/kitStyles';
-
-import { Container } from 'react-bootstrap';
+import { Flex, Font, MainContainer} from '../../styles/kitStyles';
 
 const KitList = ({ kits }) => {
-    return(
-			// <Container>
-			// 	<Font>
-			// 		<Grid>
-			// 			{ kits.map( k =>
-			// 				<Link to={`/kits/${k.id}`} style={{ color: "#fe2712", textDecoration: 'none'}}>
-			// 					<img src={k.image} style={{ width: '400px'}}></img>
-			// 					<p>{k.name}</p>
-			// 				</Link>
-			// 			)}
-			// 		</Grid>
-			// 	</Font>
-			// </Container>
-
-			// <DarkBackground>
+    return (
 				<MainContainer>
 					<Font>
 						<Flex>
 							{ kits.map( k =>
 								<Link to={`/kits/${k.id}`} style={{ color: "#fe2712", textDecoration: 'none'}}>
-									<img src={k.image} style={{ width: '400px'}}></img>
+									<img src={k.image} style={{ width: '400px', borderRadius: '5px'}}></img>
 									<p>{k.name}</p>
 								</Link>
 							)}
 						</Flex>
 					</Font>
 				</MainContainer>
-			// </DarkBackground>
     	)
 		}
 

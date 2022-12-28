@@ -21,7 +21,7 @@ const About = ({}) => (
       <Col>
         <Container class="container">
           <Image1>
-            <Image className='img-fluid rounded-pill' src='/aboutimages/Dannyp.png' alt='landscape' width="500px" />
+            <Image className='img-fluid rounded-pill' src='/aboutimages/Dannyp.png' alt='landscape' width="500px" height="200px" />
             <Header1>Danny Putnam</Header1>
             <Header2 class='text-left'>This was my first collab project! It was a fun project with really great people!</Header2>
           </Image1>

@@ -1,13 +1,14 @@
+import { Row } from 'react-bootstrap';
 import styled from 'styled-components';
 
-export const Background = styled.div`
-  background: #292929;
-  height: 100vh;
-  width: 100%;
-  overflow: hidden;
-  position: absolute;
-  left: 0%;
-`
+// export const Background = styled.div`
+//   background: #292929;
+//   height: 100vh;
+//   width: 100%;
+//   overflow: hidden;
+//   position: absolute;
+//   left: 0%;
+// `
 
 export const Header1 = styled.header`
   font-size: 60px;
@@ -27,18 +28,34 @@ export const Para = styled.p`
   font-size: 15px;
   color: #828282;
 `
-
-export const ContentContainer = styled.div`
-  position: absolute;
-  left: 810px;
-  top: 100px;
-`
-export const ContentContainer2 = styled.div`
-  position: absolute;
-  left: 650px;
-  top: 560px;
+export const Flex = styled.div`
+  display: flex;
+  padding-top: 100px;
+  flex-direction: row;
+  background: white;
+  justify-content: space-evenly;
 `
 
+export const TextContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  background: blue;
+`
+export const Hflex = styled.div`
+  display: flex;
+`
+
+export const Pflex = styled.div`
+  display: flex;
+`
+
+export const CamFlex = styled.div`
+  display: flex;
+  padding-left: 50px;
+`
+export const LogoFlex = styled.div`
+ display: flex;
+`
 
 // export const ImgContainer = styled.div`
 // `

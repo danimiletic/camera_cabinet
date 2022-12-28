@@ -1,11 +1,10 @@
 import styled from 'styled-components';
 
-export const ShowPara = styled.div`
-  position: relative;
-  left: 900px;
-  top: 270px;
-  font-family: 'Montserrat', sans-serif;
-  color: #fe2712;
+export const KitViewContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
 `;
 
 
@@ -78,6 +77,7 @@ export const Header1 = styled.div`
 
 export const Header3 = styled.div`
   color: white;
+  font-family: 'Montserrat', sans-serif;
 `;
 export const Header4 = styled.div`
   color: white;
@@ -101,10 +101,15 @@ export const FormContainer = styled.div`
   width: 50vw;
 `;
 
+export const ButtonContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+`
 export const Button = styled.button`
-  background: #fe2712;
+  background: #292929;
   border-radius: 3px;
-  border: 1px solid white;
-  color: white;
+  border: 1px solid #fe2712;
+  color: #fe2712;
   font-family: 'Montserrat', sans-serif;
 `

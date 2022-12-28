@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
-import { Image, Button } from 'react-bootstrap';
+import { Image } from 'react-bootstrap';
 import KitForm from './KitForm';
 import { KitConsumer } from '../../providers/KitProvider';
 import Gears from '../gear/Gears';
-import { Header1, Header3, Font, ShowPara, DarkBackground } from '../../styles/kitStyles';
+import { Header1, Header3, KitViewContainer, Button, ButtonContainer } from '../../styles/kitStyles';
 
 
 
@@ -27,7 +27,6 @@ const { name, description, image, item, id } = kit
 return (
 
   <>
-    {/* <DarkBackground> */}
     { editing ? 
       <>
         <KitForm 
@@ -35,39 +34,43 @@ return (
           updateKit={updateKit} 
         />
         <Button 
-        variant="link" 
-        onClick={() => 
-        setEdit(false)}>
+          variant="link" 
+          onClick={() => 
+          setEdit(false)}>
         Cancel
         </Button>
         <br />
       </>
       :
       <>
-        <ShowPara>
+        <KitViewContainer>
+          <Image src={image} style={{ width: "400px", borderRadius: '5px'}}/>
+          <Header1>{name}</Header1>
+          <Header3>Description: {description}</Header3>
+        </KitViewContainer>
+        <br />
+        <ButtonContainer>
+          <Button 
+            variant="warning" 
+            onClick={() => setEdit(true)}>
+            Edit
+          </Button>
+          &nbsp;
+          <Button 
+            variant="danger"
+            onClick={() => deleteKit(id)}>
+            Delete
+          </Button>
+        </ButtonContainer>
+        {/* <ShowPara>
+          <Image src={image} style={{ width: "400px"}}/>
           <Header1>{name}</Header1>
           <Header3>Description: {description}</Header3>
           <Header3>Item: {item} </Header3> 
-
-        </ShowPara>
-        <Image src={image} style={{ width: "400px"}}/>
-
-        <Button 
-          variant="warning" 
-          onClick={() => setEdit(true)}
-        >
-          Edit
-        </Button>
-        <Button 
-          variant="danger"
-          onClick={() => deleteKit(id)}
-        >
-          Delete
-        </Button>
+        </ShowPara> */}
       </>
       }
       <Gears kitId={id} />
-      {/* </DarkBackground> */}
     </>
   )
 }

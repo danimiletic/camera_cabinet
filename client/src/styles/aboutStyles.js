@@ -2,7 +2,9 @@ import styled from 'styled-components';
 
 
 
-
+export const ImageStyle = styled.img`
+  border-radius: 50%;
+`
 
 export const MainContainer = styled.div`
   margin: 0 auto;
@@ -15,7 +17,7 @@ export const Header1 = styled.div`
    }
   `
   export const Header2 = styled.div`
-  color: white;
+  color: #292929;
   font-size: 25px;
   opacity: 0%;
   `
@@ -68,7 +70,7 @@ export const Image1 = styled.div` {
   &:hover ${Header2} {
     transition: .5s ease;
     opacity: 200%;
-    color: #292929 ;
+    color: white;
   }
 `
 
