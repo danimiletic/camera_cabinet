@@ -5,7 +5,7 @@ import { Image } from 'react-bootstrap';
 import KitForm from './KitForm';
 import { KitConsumer } from '../../providers/KitProvider';
 import Gears from '../gear/Gears';
-import { Header1, Header3, KitViewContainer, Button, ButtonContainer } from '../../styles/kitStyles';
+import { Header1, Header2, KitViewContainer, DeleteButton, ButtonContainer, EditButton, CancelButton, Button } from '../../styles/kitStyles';
 
 
 
@@ -43,25 +43,28 @@ return (
       </>
       :
       <>
-        <KitViewContainer>
-          <Image src={image} style={{ width: "400px", borderRadius: '5px'}}/>
-          <Header1>{name}</Header1>
-          <Header3>Description: {description}</Header3>
-        </KitViewContainer>
-        <br />
-        <ButtonContainer>
-          <Button 
-            variant="warning" 
-            onClick={() => setEdit(true)}>
-            Edit
-          </Button>
-          &nbsp;
-          <Button 
-            variant="danger"
-            onClick={() => deleteKit(id)}>
-            Delete
-          </Button>
-        </ButtonContainer>
+        {/* <KitFlex>
+          <KitOutline> */}
+          <KitViewContainer>
+            <Image src={image} style={{ width: "400px", borderRadius: '5px'}}/>
+            <Header1>{name}</Header1>
+            <Header2>{description}</Header2>
+          </KitViewContainer>
+          <ButtonContainer>
+            <Button 
+              variant="warning" 
+              onClick={() => setEdit(true)}>
+              Edit
+            </Button>
+            &nbsp;
+            <Button 
+              variant="danger"
+              onClick={() => deleteKit(id)}>
+              Delete
+            </Button>
+          </ButtonContainer>
+          {/* </KitOutline>
+        </KitFlex> */}
         {/* <ShowPara>
           <Image src={image} style={{ width: "400px"}}/>
           <Header1>{name}</Header1>

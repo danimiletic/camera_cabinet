@@ -3,7 +3,7 @@ import { KitConsumer } from '../../providers/KitProvider';
 import KitList from './KitList';
 import { Container } from 'react-bootstrap';
 import KitForm from './KitForm';
-import { Header1, Para1, Button } from '../../styles/kitStyles.js';
+import { Header1, Para1, CancelButton, AddButton, Button } from '../../styles/kitStyles.js';
 
 const Kits = ({ kits, getAllKits, addKit }) => {
     const [adding, setAdding] = useState(false)
@@ -20,7 +20,7 @@ const Kits = ({ kits, getAllKits, addKit }) => {
 						</Header1>
 							<Para1>
 									The easy way to remember what you will take to your adventures.
-							</Para1>
+							</Para1> 
 								{ adding ?
 									<>
 										<KitForm addKit={addKit} />

@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { Image, Button, Modal } from 'react-bootstrap';
 import GearForm from './GearForm';
-import { Header1, Header3, Header4, Para1 } from '../../styles/kitStyles';
+import { Header1, Header2, Header4, Para1 } from '../../styles/kitStyles';
 import Documents from '../document/Documents';
 
 const GearShow = ({ updateGear, deleteGear }) => {
@@ -23,7 +23,7 @@ const GearShow = ({ updateGear, deleteGear }) => {
 
       <>
         <Header1>{name}</Header1>
-        <Header3>Desc: {desc}</Header3>
+        <Header2>Desc: {desc}</Header2>
         <Header4>price: {price}</Header4>
         <Header4>model: {model}</Header4>
         <Header4>condition: {condition}</Header4>

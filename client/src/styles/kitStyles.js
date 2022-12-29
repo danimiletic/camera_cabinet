@@ -5,6 +5,7 @@ export const KitViewContainer = styled.div`
   flex-direction: column;
   align-items: center;
   padding-top: 100px;
+
 `;
 
 
@@ -15,6 +16,7 @@ export const MainContainer = styled.div`
 `;
 export const Font = styled.div`
   font-family: 'Montserrat', sans-serif;
+  text-align: center;
 `;
 export const RedFont = styled.div`
   color: #fe2712;
@@ -71,13 +73,16 @@ export const Header1 = styled.div`
   color: White;
   font-size: 40px;
   font-family: 'Montserrat', sans-serif;
-  margin: 30px;
+  padding-top: 20px;
   left: 30px;
 `;
 
-export const Header3 = styled.div`
+export const Header2 = styled.div`
   color: white;
   font-family: 'Montserrat', sans-serif;
+  padding-top: 2px;
+  max-width: 430px;
+  text-align: center;
 `;
 export const Header4 = styled.div`
   color: white;
@@ -86,8 +91,7 @@ export const Header4 = styled.div`
 export const Para1 = styled.div`
   color: #606060;
   font-family: 'Montserrat', sans-serif;
-  margin: 30px;
-  left: 40px;
+  padding: 5px 0 20px 0;
 `;
 
 export const KitContainer = styled.div`
@@ -105,11 +109,21 @@ export const ButtonContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
+  padding-top: 10px;
 `
+
 export const Button = styled.button`
   background: #292929;
   border-radius: 3px;
   border: 1px solid #fe2712;
+  margin: 2px;
   color: #fe2712;
   font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+
+  :hover {
+    background: #fe2712;
+    color: #292929;
+    transition: 0.5s ease;
+  }
 `

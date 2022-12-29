@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Form, Container } from 'react-bootstrap';
-import { FormContainer, WhiteFont, Button } from '../../styles/kitStyles';
+import { FormContainer, WhiteFont, SubmitButton, Button } from '../../styles/kitStyles';
 
 const KitForm = ({ addKit, id, name, description, image,/* item,  */updateKit, setEdit}) => {
   const [kit, setKit] = useState({ name: '', description: '', image: '' })
