@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Flex, Font, MainContainer} from '../../styles/kitStyles';
+import { Flex, Font, MainContainer, Img} from '../../styles/kitStyles';
 
 const KitList = ({ kits }) => {
     return (
@@ -8,7 +8,7 @@ const KitList = ({ kits }) => {
 						<Flex>
 							{ kits.map( k =>
 								<Link to={`/kits/${k.id}`} style={{ color: "#fe2712", textDecoration: 'none'}}>
-									<img src={k.image} style={{ width: '400px', borderRadius: '5px'}}></img>
+									<Img src={k.image} style={{ width: '400px', borderRadius: '5px'}}></Img>
 									<p>{k.name}</p>
 								</Link>
 							)}

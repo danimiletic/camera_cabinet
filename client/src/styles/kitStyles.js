@@ -27,19 +27,6 @@ export const WhiteFont = styled.div`
   font-family: 'Montserrat', sans-serif;
   color: white;
 `;
-// export const Grid = styled.div`
-//   margin: 12rem auto;
-
-//   display: grid;
-//   grid-template-columns: 37% 37%;
-//   width: 1120px;
-//   height: 200px;
-//   margin-left: 220px;
-//   margin-right: auto;
-//   justify-items: end;
-//   align-content: space-evenly;
-//   align-items: end;
-// `
 
 export const Flex = styled.div`
   display: flex;
@@ -68,6 +55,13 @@ export const Flex = styled.div`
 //   border: 2px solid #fe2712;
 //   border-radius: 3px;
 // `;
+
+export const Img = styled.img`
+  :hover {
+    opacity: 75%;
+    transition: 0.5s ease;
+  }
+`
 
 export const Header1 = styled.div`
   color: White;
@@ -110,7 +104,7 @@ export const ButtonContainer = styled.div`
   flex-direction: row;
   justify-content: center;
   padding-top: 10px;
-`
+`;
 
 export const Button = styled.button`
   background: #292929;
@@ -126,4 +120,4 @@ export const Button = styled.button`
     color: #292929;
     transition: 0.5s ease;
   }
-`
+`;
