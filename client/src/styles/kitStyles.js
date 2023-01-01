@@ -68,7 +68,6 @@ export const Header1 = styled.div`
   font-size: 40px;
   font-family: 'Montserrat', sans-serif;
   padding-top: 20px;
-  left: 30px;
 `;
 
 export const Header2 = styled.div`

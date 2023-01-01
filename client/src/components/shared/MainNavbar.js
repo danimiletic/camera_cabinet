@@ -28,12 +28,12 @@ const MainNavbar = ({ user, handleLogout }) => {
           <NavBackground>
             <Font>
               <Nav.Link>
-                <Link to='/about' 
+                <Link to='/kits'
                   style={{ 
                   color: "#fe2712", 
                   textDecoration: 'none'
                   }}>
-                    About Us
+                    Kits
                 </Link>
               </Nav.Link>
             </Font>
@@ -41,12 +41,12 @@ const MainNavbar = ({ user, handleLogout }) => {
           <NavBackground>
             <Font>
               <Nav.Link>
-                <Link to='/kits'
+                <Link to='/about' 
                   style={{ 
                   color: "#fe2712", 
                   textDecoration: 'none'
                   }}>
-                    Kits
+                    About Us
                 </Link>
               </Nav.Link>
             </Font>
