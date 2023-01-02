@@ -4,7 +4,7 @@ export const KitViewContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 100px;
+  padding-top: 80px;
 
 `;
 
@@ -57,8 +57,9 @@ export const Flex = styled.div`
 // `;
 
 export const Img = styled.img`
+  border: 1px solid #606060;
   :hover {
-    opacity: 75%;
+    opacity: 50%;
     transition: 0.5s ease;
   }
 `
@@ -67,7 +68,6 @@ export const Header1 = styled.div`
   color: White;
   font-size: 40px;
   font-family: 'Montserrat', sans-serif;
-  padding-top: 20px;
 `;
 
 export const Header2 = styled.div`
@@ -83,6 +83,7 @@ export const Header4 = styled.div`
 
 export const Para1 = styled.div`
   color: #606060;
+  text-align: center;
   font-family: 'Montserrat', sans-serif;
   padding: 5px 0 20px 0;
 `;

@@ -1,11 +1,10 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
-import { Image } from 'react-bootstrap';
 import KitForm from './KitForm';
 import { KitConsumer } from '../../providers/KitProvider';
 import Gears from '../gear/Gears';
-import { Header1, Header2, KitViewContainer, DeleteButton, ButtonContainer, EditButton, CancelButton, Button } from '../../styles/kitStyles';
+import { Header1, Header2, KitViewContainer, DeleteButton, ButtonContainer, EditButton, CancelButton, Button, Img } from '../../styles/kitStyles';
 
 
 
@@ -46,7 +45,7 @@ return (
         {/* <KitFlex>
           <KitOutline> */}
           <KitViewContainer>
-            <Image src={image} style={{ width: "400px", borderRadius: '5px'}}/>
+            <Img src={image} style={{ width: "400px", borderRadius: '5px'}}/>
             <Header1>{name}</Header1>
             <Header2>{description}</Header2>
           </KitViewContainer>

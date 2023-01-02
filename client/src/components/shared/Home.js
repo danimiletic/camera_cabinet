@@ -12,16 +12,17 @@ const Home = ({}) => (
       <Para>Make sure you know what gear you have so <br /> you don't forget the essentials at your next <br />shoot. Sign up today, it's free!</Para> */}
       {/* <ContentContainer> */}
       <CamFlex>
-        <img src='/assets/images/camcab.jpeg' alt="logo" width='450px' height='450px'/>
+        <img src='/assets/images/camcab.jpeg' alt="logo" width='350px' height='350px'/>
       </CamFlex>
       {/* </ContentContainer> */}
       {/* <ContentContainer2> */}
       {/* </ContentContainer2> */}
     {/* </Background> */}
     </Flex>
-      <LogoFlex>
-        <img src='/assets/images/1.png' alt="logo" width='150px'/>
-      </LogoFlex>
+
+    <LogoFlex>
+      <img src='/assets/images/1.png' alt="logo" width='150px'/>
+    </LogoFlex>
 
     {/* MESSING WITH GRID  */}
 
