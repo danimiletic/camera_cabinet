@@ -5,7 +5,6 @@ export const KitViewContainer = styled.div`
   flex-direction: column;
   align-items: center;
   padding-top: 80px;
-
 `;
 
 
@@ -23,9 +22,9 @@ export const RedFont = styled.div`
   
 `;
 
-export const WhiteFont = styled.div`
+export const FormFont = styled.div`
   font-family: 'Montserrat', sans-serif;
-  color: white;
+  color: #606060;
 `;
 
 export const Flex = styled.div`
@@ -96,7 +95,8 @@ export const KitContainer = styled.div`
 `;
 
 export const FormContainer = styled.div`
-  width: 50vw;
+  max-width: 500px;
+  padding: 30px 30px 30px 30px;
 `;
 
 export const ButtonContainer = styled.div`
@@ -107,7 +107,7 @@ export const ButtonContainer = styled.div`
 `;
 
 export const Button = styled.button`
-  background: #292929;
+  background: none;
   border-radius: 3px;
   border: 1px solid #fe2712;
   margin: 2px;
@@ -117,7 +117,11 @@ export const Button = styled.button`
 
   :hover {
     background: #fe2712;
-    color: #292929;
+    color: white;
     transition: 0.5s ease;
   }
 `;
+
+export const ModalContainer = styled.div`
+  display: flex;
+`

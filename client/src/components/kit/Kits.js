@@ -1,12 +1,17 @@
 import { useEffect, useState } from 'react';
 import { KitConsumer } from '../../providers/KitProvider';
+import { Modal } from 'react-bootstrap';
 import KitList from './KitList';
-import { Container } from 'react-bootstrap';
 import KitForm from './KitForm';
-import { Header1, Para1, CancelButton, AddButton, Button, KitViewContainer } from '../../styles/kitStyles.js';
+import { Header1, Para1, Button, KitViewContainer, ModalContainer, FormFont } from '../../styles/kitStyles.js';
 
 const Kits = ({ kits, getAllKits, addKit }) => {
     const [adding, setAdding] = useState(false)
+
+		const [show, setShow] = useState(false);
+
+		const handleClose = () => setShow(false);
+		const handleShow = () => setShow(true);
 
     useEffect( () => {
         getAllKits()
@@ -16,6 +21,23 @@ const Kits = ({ kits, getAllKits, addKit }) => {
         <>
 					<KitViewContainer>
 						<Header1>
+							Your Kits
+						</Header1>
+						<Para1>
+							The easy way to remember what you will take to your adventures.
+						</Para1> 
+						<Button variant="primary" onClick={handleShow}>
+							Add Kit
+						</Button>
+						<Modal show={show} onHide={handleClose} animation={false}>
+							<Modal.Header closeButton>
+							<FormFont>
+								<Modal.Title>Kit Information</Modal.Title>
+							</FormFont>
+							</Modal.Header>
+							<KitForm addKit={addKit} />
+						</Modal>
+						{/* <Header1>
 							Your Kits
 						</Header1>
 							<Para1>
@@ -29,7 +51,8 @@ const Kits = ({ kits, getAllKits, addKit }) => {
 									</>
 										:
 									<Button onClick={() => setAdding(true)}>Add Kit</Button>
-								}
+								} */}
+								
 						<KitList kits={kits} />
 					</KitViewContainer>
         </>

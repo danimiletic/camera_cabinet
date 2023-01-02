@@ -4,7 +4,7 @@ import axios from 'axios';
 import KitForm from './KitForm';
 import { KitConsumer } from '../../providers/KitProvider';
 import Gears from '../gear/Gears';
-import { Header1, Header2, KitViewContainer, DeleteButton, ButtonContainer, EditButton, CancelButton, Button, Img } from '../../styles/kitStyles';
+import { Header1, Header2, KitViewContainer, ButtonContainer, Button, Img } from '../../styles/kitStyles';
 
 
 

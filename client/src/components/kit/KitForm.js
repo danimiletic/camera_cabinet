@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import { Form, Container } from 'react-bootstrap';
-import { FormContainer, WhiteFont, SubmitButton, Button } from '../../styles/kitStyles';
+import { Form } from 'react-bootstrap';
+import { FormContainer, FormFont, Button } from '../../styles/kitStyles';
 
 const KitForm = ({ addKit, id, name, description, image,/* item,  */updateKit, setEdit}) => {
   const [kit, setKit] = useState({ name: '', description: '', image: '' })
@@ -51,8 +51,7 @@ const KitForm = ({ addKit, id, name, description, image,/* item,  */updateKit, s
         {/* <button type="submit">Submit</button>
       </form> */}
       <FormContainer>
-        <Container>
-          <WhiteFont>
+          <FormFont>
             <Form onSubmit={handleSubmit}>
               <Form.Group className="mb-3" >
                 <Form.Label>Kit Name: </Form.Label>
@@ -85,8 +84,7 @@ const KitForm = ({ addKit, id, name, description, image,/* item,  */updateKit, s
                 Submit
               </Button>
             </Form>
-          </WhiteFont>
-        </Container>
+          </FormFont>
       </FormContainer>
     </>
   )
