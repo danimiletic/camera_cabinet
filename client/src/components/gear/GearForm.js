@@ -1,14 +1,15 @@
 import { useState, useEffect } from 'react';
+import { Button } from '../../styles/gearStyles';
 
-const GearForm = ({kitId, id, setAdd, name, desc, price, model, condition, make, image, serial, setEdit, updateGear, addGear, bought, quantity/*category*/}) => {
+const GearForm = ({kitId, id, setAdd, name, desc, price, model, condition, make, image, serial, setEdit, updateGear, addGear, bought }) => {
   
   const [gear, setGear] = useState({ name: '', desc: '', price: 0, model: '',
-  condition: '', make: '', image: '', serial: '', /*category: ''*/ bought: '', quantity: ''})
+  condition: '', make: '', image: '', serial: '', bought: ''})
 
 
   useEffect( () => {
     if (id) {
-    setGear({ name, desc, price, model, condition, make, image, serial, bought, quantity,/*category*/})
+    setGear({ name, desc, price, model, condition, make, image, serial, bought})
     }
   }, [])
 
@@ -22,7 +23,7 @@ const GearForm = ({kitId, id, setAdd, name, desc, price, model, condition, make,
     setAdd(false)
   }
     setGear({ name: '', desc: '', price: 0, model: '',
-    condition: '', make: '', image: '', serial: '', /*category: ''*/bought: '', quantity: '', })
+    condition: '', make: '', image: '', serial: '', bought: ''})
   }
 
  
@@ -90,14 +91,6 @@ const GearForm = ({kitId, id, setAdd, name, desc, price, model, condition, make,
           onChange={(e) => setGear({...gear, condition: e.target.value})}
           placeholder="Condition"
         />
-       <label>Quantity:</label>
-        <input 
-        type="text"
-          name='quantity'
-          value={gear.quantity}
-          onChange={(e) => setGear({...gear, quantity: e.target.value})}
-          placeholder="Quantity"
-        />
        <label>Date of Purchase:</label>
         <input 
           type="date"
@@ -122,7 +115,7 @@ const GearForm = ({kitId, id, setAdd, name, desc, price, model, condition, make,
           onChange={(e) => setGear({...gear, desc: e.target.value})}
           placeholder="Description"
         />
-        <button type='submit'>Submit</button>
+        <Button type='submit'>Submit</Button>
       </form>
     </>
   )

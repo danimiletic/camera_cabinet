@@ -29,9 +29,7 @@ const GearShow = ({ updateGear, deleteGear }) => {
         <Header4>condition: {condition}</Header4>
         <Header4>make: {make}</Header4>
         <Header4>serial: {serial}</Header4>
-        <Header4>category: {category}</Header4>
         <Header4>bought: {bought}</Header4>
-        <Header4>quantity: {quantity}</Header4>
         <Image src={image} style={{ width: '400px'}} />
       
       <Button variant="warning" onClick={() => setEdit(true)}>

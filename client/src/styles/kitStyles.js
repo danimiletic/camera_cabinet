@@ -7,12 +7,30 @@ export const KitViewContainer = styled.div`
   padding-top: 80px;
 `;
 
+export const KitListContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 80px;
+`;
+
+
+export const ContentContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 5px;
+  border: solid 1px #606060;
+  // background-image: url("../striped.png");
+  margin: 50px 0 50px 0;
+`;
 
 export const MainContainer = styled.div`
-  margin: 0 auto;
-  max-width: 1280px;
-  min-height: 0;
+  display: flex;
+  justify-content: center;
 `;
+
 export const Font = styled.div`
   font-family: 'Montserrat', sans-serif;
   text-align: center;
@@ -31,10 +49,10 @@ export const Flex = styled.div`
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
   padding: 10px;
   margin: 15px;
-  overflow: auto;
+  overflow: auto
 `;
 
 // export const DarkBackground = styled.div`
@@ -67,12 +85,13 @@ export const Header1 = styled.div`
   color: White;
   font-size: 40px;
   font-family: 'Montserrat', sans-serif;
+  padding-bottom: 10px;
 `;
 
 export const Header2 = styled.div`
   color: white;
   font-family: 'Montserrat', sans-serif;
-  padding-top: 2px;
+  padding-top: 15px;
   max-width: 430px;
   text-align: center;
 `;
@@ -92,6 +111,7 @@ export const KitContainer = styled.div`
   justify-content: center;
   align-content: center; 
   border: solid white;
+  background: blue;
 `;
 
 export const FormContainer = styled.div`

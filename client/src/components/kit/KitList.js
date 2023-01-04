@@ -1,9 +1,8 @@
 import { Link } from 'react-router-dom';
-import { Flex, Font, MainContainer, Img} from '../../styles/kitStyles';
+import { Flex, Font, Img} from '../../styles/kitStyles';
 
 const KitList = ({ kits }) => {
     return (
-				<MainContainer>
 					<Font>
 						<Flex>
 							{ kits.map( k =>
@@ -14,7 +13,6 @@ const KitList = ({ kits }) => {
 							)}
 						</Flex>
 					</Font>
-				</MainContainer>
     	)
 		}
 

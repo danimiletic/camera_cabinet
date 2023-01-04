@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import { GearConsumer } from '../../providers/GearProvider';
 import GearList from './GearList';
-import { Button } from 'react-bootstrap';
 import GearForm from './GearForm';
 import { useParams } from 'react-router-dom';
+import { Button, ButtonContainer, Header1, Para1, Flex } from '../../styles/gearStyles';
 
 const Gears = ({ gears, getAllGears, addGear, kitId }) => {
     const [adding, setAdd] = useState(false)
@@ -16,27 +16,30 @@ const Gears = ({ gears, getAllGears, addGear, kitId }) => {
 
   return (
     <>
+			<Flex>
+				<Header1 style={{ 
+					color: "white",
+					}}>
+					Camera Parts
+				</Header1>
 
-			<h1 style={{ 
-				color: "white",
-				}}>
-				All Gear
-			</h1>
-
-			{ adding ?
-					<>
-						<GearForm 
-							addGear={addGear} 
-							kitId={params.kitId} 
-							setAdd={setAdd}
-						/>
-						<Button variant="info" onClick={() => setAdd(false)}>Cancel</Button>    
-					</>
-						:
-						<Button variant="info" onClick={() => setAdd(true)}>Add Gear</Button>
-			}
-			<GearList gears={gears} kitId={params.kitId} />
-      </>
+				<GearList gears={gears} kitId={params.kitId} />
+				{ adding ?
+						<>
+							<GearForm 
+								addGear={addGear} 
+								kitId={params.kitId} 
+								setAdd={setAdd}
+							/>
+							<Button onClick={() => setAdd(false)}>Cancel</Button>    
+						</>
+							:
+						<ButtonContainer>
+							<Button onClick={() => setAdd(true)}>Add Gear</Button>
+						</ButtonContainer>
+				}
+			</Flex>
+    </>
     )
 }
 

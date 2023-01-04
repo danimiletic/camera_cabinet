@@ -3,23 +3,22 @@ import { KitConsumer } from '../../providers/KitProvider';
 import { Modal } from 'react-bootstrap';
 import KitList from './KitList';
 import KitForm from './KitForm';
-import { Header1, Para1, Button, KitViewContainer, ModalContainer, FormFont } from '../../styles/kitStyles.js';
+import { Header1, Para1, Button, KitListContainer, ModalContainer, FormFont } from '../../styles/kitStyles.js';
 
 const Kits = ({ kits, getAllKits, addKit }) => {
-    const [adding, setAdding] = useState(false)
+		
+	const [show, setShow] = useState(false);
 
-		const [show, setShow] = useState(false);
+	const handleClose = () => setShow(false);
+	const handleShow = () => setShow(true);
 
-		const handleClose = () => setShow(false);
-		const handleShow = () => setShow(true);
-
-    useEffect( () => {
-        getAllKits()
-    }, [])
+  useEffect( () => {
+    getAllKits()
+  }, [])
 
     return (
         <>
-					<KitViewContainer>
+					<KitListContainer>
 						<Header1>
 							Your Kits
 						</Header1>
@@ -31,9 +30,9 @@ const Kits = ({ kits, getAllKits, addKit }) => {
 						</Button>
 						<Modal show={show} onHide={handleClose} animation={false}>
 							<Modal.Header closeButton>
-							<FormFont>
-								<Modal.Title>Kit Information</Modal.Title>
-							</FormFont>
+								<FormFont>
+									<Modal.Title>Kit Information</Modal.Title>
+								</FormFont>
 							</Modal.Header>
 							<KitForm addKit={addKit} />
 						</Modal>
@@ -54,7 +53,7 @@ const Kits = ({ kits, getAllKits, addKit }) => {
 								} */}
 								
 						<KitList kits={kits} />
-					</KitViewContainer>
+					</KitListContainer>
         </>
     )
 }
