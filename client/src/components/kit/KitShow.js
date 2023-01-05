@@ -4,8 +4,9 @@ import axios from 'axios';
 import KitForm from './KitForm';
 import { KitConsumer } from '../../providers/KitProvider';
 import Gears from '../gear/Gears';
-import { Header1, Header2, KitViewContainer, ButtonContainer, Button, Img, MainContainer, ContentContainer } from '../../styles/kitStyles';
+import { Header1, Header2, ImageContainer, ButtonContainer, Button, Img, MainContainer, ContentContainer } from '../../styles/kitStyles';
 import { GearContainer } from '../../styles/gearStyles';
+import { Carousel } from 'react-bootstrap';
 
 const KitShow = ({ updateKit, deleteKit }) => {
 
@@ -39,30 +40,57 @@ return (
         <br />
       </>
       :
-      <>
-      <MainContainer>
-        <ContentContainer>
-          <KitViewContainer>
-            <Header1>{name}</Header1>
-            <Img src={image} style={{ width: "400px", borderRadius: '5px'}}/>
-            <Header2>{description}</Header2>
-          <ButtonContainer>
-            <Button 
-              onClick={() => setEdit(true)}>
-              Edit
-            </Button>
-            &nbsp;
-            <Button 
-              onClick={() => deleteKit(id)}>
-              Delete
-            </Button>
-          </ButtonContainer>
-          </KitViewContainer> 
-          <GearContainer>
-            <Gears kitId={id} />
-          </GearContainer>
-        </ContentContainer>
-      </MainContainer>
+      <>  
+
+          <ContentContainer>
+            <Carousel>
+              <Carousel.Item>
+                <ImageContainer>
+                  <Header1>{name}</Header1>
+                  <Img src={image} style={{ width: "350px", borderRadius: '5px'}}/>
+                  <Header2>{description}</Header2>
+                <ButtonContainer>
+                  <Button onClick={() => setEdit(true)}>
+                    Edit
+                  </Button>
+                    &nbsp;
+                  <Button onClick={() => deleteKit(id)}>
+                    Delete
+                  </Button>
+                </ButtonContainer>
+                </ImageContainer>
+              </Carousel.Item>
+              <Carousel.Item>
+                <GearContainer>
+                  <Gears kitId={id} />
+                </GearContainer> 
+              </Carousel.Item>
+            </Carousel>
+          </ContentContainer>
+
+        {/* <MainContainer>
+          <ContentContainer>
+            <KitViewContainer>
+              <Header1>{name}</Header1>
+              <Img src={image} style={{ width: "400px", borderRadius: '5px'}}/>
+              <Header2>{description}</Header2>
+            </KitViewContainer> 
+            <ButtonContainer>
+              <Button 
+                onClick={() => setEdit(true)}>
+                Edit
+              </Button>
+              &nbsp;
+              <Button 
+                onClick={() => deleteKit(id)}>
+                Delete
+              </Button>
+            </ButtonContainer>
+            <GearContainer>
+              <Gears kitId={id} />
+            </GearContainer> 
+          </ContentContainer>
+        </MainContainer>  */}
       </>
       }
     </>
@@ -76,3 +104,6 @@ const ConnectedKitShow = (props) => (
 )
 
 export default ConnectedKitShow;
+
+
+

@@ -2,20 +2,24 @@ import styled from 'styled-components';
 
 export const GearContainer = styled.div`
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
   padding: 52px;
-
 `;
 
 export const Flex = styled.div`
-  display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
-  padding: 10px;
-  margin: 15px;
 `;
+// export const Flex = styled.div`
+//   display: flex;
+//   flex-wrap: wrap;
+//   flex-direction: column;
+//   justify-content: center;
+//   padding: 10px;
+//   margin: 15px;
+
+//   background: green;
+// `;
 
 export const Button = styled.button`
   background: none;
