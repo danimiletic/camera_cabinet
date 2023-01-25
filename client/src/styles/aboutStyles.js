@@ -16,6 +16,7 @@ export const MainContainer = styled.div`
 `;
 export const Img = styled.img`
   border-radius: 5px;
+  border: solid 1px #606060;
   width: 280px;
   height: 300px;
 `;

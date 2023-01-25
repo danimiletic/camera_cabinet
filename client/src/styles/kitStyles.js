@@ -4,7 +4,8 @@ export const ImageContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px 10px 20px 10px;
+  padding: 20px 20px 20px 20px;
+  margin: 30px 0 0 0;;
 `;
 
 export const ContentContainer = styled.div`
@@ -12,21 +13,23 @@ export const ContentContainer = styled.div`
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  border: 1px solid #606060;
   border-radius: 5px;
-  margin: auto;
-  height: 600px;
+  max-width: 600px;
+  margin: 40px 0 40px; 0;
 `;
 
 export const MainContainer = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: center;;
 `;
 
 export const ButtonContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding: 10px 0 20px 0;
+  padding: 10px 0 0 0;;
 `;
 
 export const Button = styled.button`

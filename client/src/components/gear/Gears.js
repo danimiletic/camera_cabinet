@@ -16,7 +16,7 @@ const Gears = ({ gears, getAllGears, addGear, kitId }) => {
 
   return (
     <>
-			<Flex>
+			{/* <Flex> */}
 				<Header1 style={{ 
 					color: "white",
 					}}>
@@ -38,7 +38,7 @@ const Gears = ({ gears, getAllGears, addGear, kitId }) => {
 							<Button onClick={() => setAdd(true)}>Add Gear</Button>
 						</ButtonContainer>
 				}
-			</Flex>
+			{/* </Flex> */}
     </>
     )
 }

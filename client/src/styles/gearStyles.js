@@ -3,13 +3,13 @@ import styled from 'styled-components';
 export const GearContainer = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 52px;
+  padding: 20px 10px 60px 10px;;
 `;
 
-export const Flex = styled.div`
-  flex-direction: column;
-  justify-content: center;
-`;
+// export const Flex = styled.div`
+//   flex-direction: column;
+//   background: orange;
+// `;
 // export const Flex = styled.div`
 //   display: flex;
 //   flex-wrap: wrap;

@@ -25,7 +25,7 @@ const Kits = ({ kits, getAllKits, addKit }) => {
 						<Para1>
 							The easy way to remember what you will take to your adventures.
 						</Para1> 
-						<Button variant="primary" onClick={handleShow}>
+						<Button onClick={handleShow}>
 							Add Kit
 						</Button>
 						<Modal show={show} onHide={handleClose} animation={false}>
