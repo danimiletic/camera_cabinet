@@ -2,15 +2,21 @@ import { GearConsumer } from '../../providers/GearProvider';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { Image, Button, Modal } from 'react-bootstrap';
+import { Image, Modal } from 'react-bootstrap';
 import GearForm from './GearForm';
 import { Header1, Header2, Header4, Para1 } from '../../styles/kitStyles';
+import { Button } from '../../styles/gearStyles';
 import Documents from '../document/Documents';
 
 const GearShow = ({ updateGear, deleteGear }) => {
     const params = useParams()
-    const [gear, setGear] = useState({ name: '', desc:'', price: 0, model:'', condition:'', make:'', image: '', serial:'', category: '', bought: '', quantity: ''})
+    const [gear, setGear] = useState({ name: '', desc:'', price: 0,/* model:'', condition:'', */make:'', image: '',/* serial:'', category: '',*/ bought: '', /*quantity: ''*/})
     const [editing, setEdit] = useState(false)
+
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
 
     useEffect(() =>{
         axios.get(`/api/kits/${params.kitId}/gears/${params.gearId}`)
@@ -18,32 +24,34 @@ const GearShow = ({ updateGear, deleteGear }) => {
     .catch( err => console.log(err))
     }, [])
 
-    const { name, desc, price, model, condition, make, image, serial, category, bought, quantity, id} = gear
+    const { name, desc, price, /*model, condition, */make, image, /*serial, category,*/ bought,/* quantity,*/ id} = gear
     return (
 
       <>
         <Header1>{name}</Header1>
         <Header2>Desc: {desc}</Header2>
         <Header4>price: {price}</Header4>
-        <Header4>model: {model}</Header4>
-        <Header4>condition: {condition}</Header4>
+        {/* <Header4>model: {model}</Header4>å */}
+        {/* <Header4>condition: {condition}</Header4> */}
         <Header4>make: {make}</Header4>
-        <Header4>serial: {serial}</Header4>
+        {/* <Header4>serial: {serial}</Header4> */}
+        {/* <Header4>category: {category}</Header4> */}
         <Header4>bought: {bought}</Header4>
+        {/* <Header4>quantity: {quantity}</Header4> */}
         <Image src={image} style={{ width: '400px'}} />
       
-      <Button variant="warning" onClick={() => setEdit(true)}>
+      <Button onClick={() => handleShow(true)}>
         Edit
       </Button>
-      <Button variant="danger" onClick={() => deleteGear(params.kitId, params.gearId)}>
+      <Button onClick={() => deleteGear(params.kitId, params.gearId)}>
         Delete
       </Button>
       
       <Documents gearId={params.gearId} />
 
-      <Modal show={editing} onHide={() => setEdit(false)}>
+      <Modal show={show} onHide={handleClose} animation={false}>
         <Modal.Header closeButton>
-          <Modal.Title>Editing</Modal.Title>
+          <Modal.Title>Gear Info</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <GearForm
@@ -54,11 +62,6 @@ const GearShow = ({ updateGear, deleteGear }) => {
             setEdit={setEdit}
           />
         </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={() => setEdit(false)}>
-            Close
-          </Button>
-        </Modal.Footer>
       </Modal>
     </>
     )

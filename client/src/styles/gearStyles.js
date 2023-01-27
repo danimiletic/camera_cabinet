@@ -57,3 +57,13 @@ export const Para1 = styled.div`
   font-family: 'Montserrat', sans-serif;
   padding: 5px 0 20px 0;
 `;
+
+export const FormFont = styled.div`
+  font-family: 'Montserrat', sans-serif;
+  color: #606060;
+`;
+
+export const FormContainer = styled.div`
+  max-width: 500px;
+  padding: 30px 30px 30px 30px;
+`;

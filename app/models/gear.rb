@@ -1,6 +1,8 @@
 class Gear < ApplicationRecord
   belongs_to :kit
 
-  validates :name, :desc, :price, :model, :condition, :make, :image, :serial, :bought,   presence: true
+  has_many :documents, dependent: :destroy
+
+  validates :name, :desc, :price, :make, :image, :bought,   presence: true
 
 end
