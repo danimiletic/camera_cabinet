@@ -1,4 +1,4 @@
-import { Header1, CamItem, LogoItem, CamFlex, LogoFlex, Flex, Para, Hflex, Pflex, TextContainer } from '../../styles/homePageStyles';
+import { CamFlex, LogoFlex, Flex, Hflex, Pflex, TextContainer, Img } from '../../styles/homePageStyles';
 
 const Home = ({}) => (
   <>
@@ -12,7 +12,7 @@ const Home = ({}) => (
       <Para>Make sure you know what gear you have so <br /> you don't forget the essentials at your next <br />shoot. Sign up today, it's free!</Para> */}
       {/* <ContentContainer> */}
       <CamFlex>
-        <img src='/assets/images/camcab.jpeg' alt="logo" width='350px' height='350px'/>
+        <Img src='/assets/images/camcab.jpeg' alt="logo" style={{width:'350px', height:'350px', borderRadius:'5px'}}/>
       </CamFlex>
       {/* </ContentContainer> */}
       {/* <ContentContainer2> */}
