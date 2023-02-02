@@ -20,7 +20,7 @@ const Kits = ({ kits, getAllKits, addKit }) => {
         <>
 					<KitListContainer>
 						<Header1>
-							Your Kits
+							YOUR KITS
 						</Header1>
 						<Para1>
 							The easy way to remember what you will take to your adventures.

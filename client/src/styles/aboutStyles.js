@@ -35,7 +35,8 @@ export const Container = styled.div`
 export const Header1 = styled.div`
   color: white;
   font-size: 40px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
   font-size: 20px;
   text-align: center;
 `;

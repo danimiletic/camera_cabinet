@@ -38,7 +38,7 @@ export const Button = styled.button`
   border: 1px solid #fe2712;
   margin: 2px;
   color: #fe2712;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Robotot', sans-serif;
   font-size: 15px;
 
   :hover {
@@ -56,7 +56,7 @@ export const KitListContainer = styled.div`
 `;
 
 export const Font = styled.div`
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
   text-align: center;
 `;
 export const RedFont = styled.div`
@@ -65,7 +65,7 @@ export const RedFont = styled.div`
 `;
 
 export const FormFont = styled.div`
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: #606060;
 `;
 
@@ -90,36 +90,18 @@ export const Img = styled.img`
 export const Header1 = styled.div`
   color: White;
   font-size: 40px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
   padding-bottom: 10px;
 `;
 
 export const Header2 = styled.div`
   color: white;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
   padding: 15px 0 20px 0;
   max-width: 400px;
   text-align: center;
 `;
-
-// export const DarkBackground = styled.div`
-//   background: #292929;
-//   height: 100vh;
-//   width: 100%;
-//   position: absolute;
-//   left: 0%;
-// `;
-
-// export const Button = styled.button`
-//   ${props => props.primary ? "#fe2712" : "#282c34"};
-//   color: ${props => props.primary ? "#282c34" : "#fe2712"}
-//   font-size: 1em;
-//   margin: 1em;
-//   padding: 0.25em 1em;
-//   border: 2px solid #fe2712;
-//   border-radius: 3px;
-// `;
-
 
 export const Header4 = styled.div`
   color: white;
@@ -128,7 +110,7 @@ export const Header4 = styled.div`
 export const Para1 = styled.div`
   color: #606060;
   text-align: center;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
   padding: 5px 0 20px 0;
 `;
 

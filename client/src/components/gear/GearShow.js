@@ -4,8 +4,8 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { Image, Modal } from 'react-bootstrap';
 import GearForm from './GearForm';
-import { Header1, Header2, Header4, Para1 } from '../../styles/kitStyles';
-import { Button } from '../../styles/gearStyles';
+import { Header1, Header2 } from '../../styles/kitStyles';
+import { Button, ButtonContainer, MainContainer, ContentContainer, ImageContainer } from '../../styles/gearStyles';
 import Documents from '../document/Documents';
 
 const GearShow = ({ updateGear, deleteGear }) => {
@@ -28,42 +28,45 @@ const GearShow = ({ updateGear, deleteGear }) => {
     return (
 
       <>
-        <Header1>{name}</Header1>
-        <Header2>Desc: {desc}</Header2>
-        <Header4>price: {price}</Header4>
-        {/* <Header4>model: {model}</Header4>å */}
-        {/* <Header4>condition: {condition}</Header4> */}
-        <Header4>make: {make}</Header4>
-        {/* <Header4>serial: {serial}</Header4> */}
-        {/* <Header4>category: {category}</Header4> */}
-        <Header4>bought: {bought}</Header4>
-        {/* <Header4>quantity: {quantity}</Header4> */}
-        <Image src={image} style={{ width: '400px'}} />
-      
-      <Button onClick={() => handleShow(true)}>
-        Edit
-      </Button>
-      <Button onClick={() => deleteGear(params.kitId, params.gearId)}>
-        Delete
-      </Button>
-      
-      <Documents gearId={params.gearId} />
+        <MainContainer>
+          <ContentContainer>
+            <Header1>{name}</Header1>
+            <ImageContainer>
+              <Image src={image} style={{ width: '400px', borderRadius: '5px'}} />
+            </ImageContainer>
+            <Header2>Desc: {desc}</Header2>
+            <Header2>price: {price}</Header2>
+            <Header2>make: {make}</Header2>
+            <Header2>bought: {bought}</Header2>
+            <ButtonContainer>
+              <Button onClick={() => handleShow(true)}>
+                Edit
+              </Button>
+              &nbsp;
+              <Button onClick={() => deleteGear(params.kitId, params.gearId)}>
+                Delete
+              </Button>
+            </ButtonContainer>
+            
+            {/* <Documents gearId={params.gearId} /> */}
+          </ContentContainer>
+        </MainContainer>
 
-      <Modal show={show} onHide={handleClose} animation={false}>
-        <Modal.Header closeButton>
-          <Modal.Title>Gear Info</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <GearForm
-            {...gear}
-            kitId={params.kitId}
-            id={params.gearId}
-            updateGear={updateGear}
-            setEdit={setEdit}
-          />
-        </Modal.Body>
-      </Modal>
-    </>
+        <Modal show={show} onHide={handleClose} animation={false}>
+          <Modal.Header closeButton>
+            <Modal.Title>Gear Info</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <GearForm
+              {...gear}
+              kitId={params.kitId}
+              id={params.gearId}
+              updateGear={updateGear}
+              setEdit={setEdit}
+            />
+          </Modal.Body>
+        </Modal>
+      </>
     )
 	}
 
