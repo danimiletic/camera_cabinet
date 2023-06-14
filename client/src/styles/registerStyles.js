@@ -13,10 +13,14 @@ export const WhiteFont = styled.div`
 `;
 
 export const RegisterContainer = styled.div`
-  width: 30vw;
-  left: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   top: 200px;
-  position: absolute;
+  height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
 `;
 
 export const RedBackground = styled.div`
@@ -27,3 +31,19 @@ export const RedBackground = styled.div`
   position: absolute;
   left: 0%;
 `
+
+export const Button = styled.button`
+  background: none;
+  border-radius: 3px;
+  border: 1px solid #fe2712;
+  margin: 2px;
+  color: #fe2712;
+  font-family: 'Robotot', sans-serif;
+  font-size: 15px;
+
+  :hover {
+    background: #fe2712;
+    color: white;
+    transition: 0.5s ease;
+  }
+`;
