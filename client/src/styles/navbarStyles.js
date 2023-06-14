@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 
-export const NavBackground = styled.div`
-  background: #292929;
-  font-family: 'Montserrat', sans-serif;
-`
+export const Font = styled.div`
+  font-family: 'roboto', sans-serif;
+  text-align: center;
+`;
+export const CamCabFont = styled.div`
+  font-family: 'montserrat', sans-serif;
+  text-align: center;
+`;

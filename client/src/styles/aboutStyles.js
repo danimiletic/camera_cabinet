@@ -37,6 +37,14 @@ export const Header1 = styled.div`
   font-size: 40px;
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
+  font-size: 40px;
+  text-align: center;
+`;
+export const Header2 = styled.div`
+  color: white;
+  font-size: 40px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
   font-size: 20px;
   text-align: center;
 `;

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { AuthConsumer } from '../../providers/AuthProvider';
-import { Form, Button } from 'react-bootstrap';
-import { LoginContainer, WhiteFont, RedBackground, FormFont } from '../../styles/loginStyles';
+import { Form } from 'react-bootstrap';
+import { LoginContainer, Font, Button } from '../../styles/loginStyles';
 
 const Login = ({ handleLogin }) => {
 
@@ -15,11 +15,9 @@ const Login = ({ handleLogin }) => {
 
   return (
     <>
-      <RedBackground>
         <LoginContainer>
-          <WhiteFont>Login</WhiteFont>
+          <Font>Login</Font>
           <br />
-          <FormFont>
             <Form onSubmit={handleSubmit}>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Email: </Form.Label>
@@ -46,9 +44,7 @@ const Login = ({ handleLogin }) => {
                 Submit
               </Button>
             </Form>
-          </FormFont>
         </LoginContainer>
-      </RedBackground>
     </>
   )
 }

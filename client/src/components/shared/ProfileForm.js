@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
 
-const ProfileForm = ({ updateUser, setEdit, fname, lname, age,email, addUser,id}) => {
-  const [user, setUser] = useState({ fname: '', lname: '', age: '', email: '' })
+const ProfileForm = ({ updateUser, setEdit, fname, lname, email, addUser, id}) => {
+  const [user, setUser] = useState({ fname: '', lname: '',  email: '' })
  
  
   useEffect( () => {
     if (id) {
-    setUser({ fname, lname, age, email})
+    setUser({ fname, lname, email})
     }
   }, [])
 
@@ -16,7 +16,7 @@ const ProfileForm = ({ updateUser, setEdit, fname, lname, age,email, addUser,id}
       updateUser(id, user)
       setEdit(false)
     } 
-  setUser({ fname: '', lname: '', age: '',email: '' })
+  setUser({ fname: '', lname: '', email: '' })
   }
 
   return (
@@ -33,12 +33,6 @@ const ProfileForm = ({ updateUser, setEdit, fname, lname, age,email, addUser,id}
           name='Last Name'
           value={user.lname}
           onChange={(e) => setUser({ ...user, lname: e.target.value })}
-        />
-        <label>Age:</label>
-        <input 
-          name='Age'
-          value={user.age}
-          onChange={(e) => setUser({ ...user, age: e.target.value })}
         />
         <label>Email:</label>
         <input 

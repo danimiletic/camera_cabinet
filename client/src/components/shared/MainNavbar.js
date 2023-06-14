@@ -2,8 +2,7 @@
 import { AuthConsumer } from '../../providers/AuthProvider';
 import { Link } from 'react-router-dom';
 import { Navbar, Container, Nav } from 'react-bootstrap';
-import { Font } from '../../styles/kitStyles';
-import { NavBackground } from '../../styles/navbarStyles';
+import { Font, CamCabFont } from '../../styles/navbarStyles';
 
 const MainNavbar = ({ user, handleLogout }) => {
 
@@ -12,7 +11,6 @@ const MainNavbar = ({ user, handleLogout }) => {
     if (user) {
       return (
         <>
-          <NavBackground>
             <Font>
               <Nav.Link>
                 <Link to='/profile' 
@@ -24,8 +22,6 @@ const MainNavbar = ({ user, handleLogout }) => {
                 </Link>
               </Nav.Link>
             </Font>
-          </NavBackground>
-          <NavBackground>
             <Font>
               <Nav.Link>
                 <Link to='/kits'
@@ -37,8 +33,6 @@ const MainNavbar = ({ user, handleLogout }) => {
                 </Link>
               </Nav.Link>
             </Font>
-          </NavBackground>
-          <NavBackground>
             <Font>
               <Nav.Link>
                 <Link to='/about' 
@@ -50,7 +44,6 @@ const MainNavbar = ({ user, handleLogout }) => {
                 </Link>
               </Nav.Link>
             </Font>
-          </NavBackground>
           {/* <Font>
             <Nav.Link>
               <Link to='/gears'
@@ -62,7 +55,6 @@ const MainNavbar = ({ user, handleLogout }) => {
               </Link>
             </Nav.Link>
           </Font> */}
-          <NavBackground>
           <Font>
             <Nav.Link onClick={ () => handleLogout() }>
               <Link to="/logout" 
@@ -74,14 +66,12 @@ const MainNavbar = ({ user, handleLogout }) => {
               </Link>
             </Nav.Link>
           </Font>
-          </NavBackground>
         </>
       )
     } else {
       // links will display when user is not logged in
       return (
         <>
-          <NavBackground>
             <Font>
               <Nav.Link>
                 <Link to='/login' 
@@ -93,8 +83,6 @@ const MainNavbar = ({ user, handleLogout }) => {
                 </Link>
               </Nav.Link>
             </Font>
-          </NavBackground>
-          <NavBackground>
             <Font>
               <Nav.Link>
                 <Link to='/register' 
@@ -106,7 +94,6 @@ const MainNavbar = ({ user, handleLogout }) => {
                 </Link>
               </Nav.Link>
             </Font>
-          </NavBackground>
         </>
       )
     }
@@ -114,8 +101,7 @@ const MainNavbar = ({ user, handleLogout }) => {
 
   return (
     <>
-      <NavBackground>
-        <Font>
+        <CamCabFont>
           <Navbar variant="light">
             <Container>
               <Navbar.Brand className="mr-auto">
@@ -124,7 +110,7 @@ const MainNavbar = ({ user, handleLogout }) => {
                   color: "#fe2712", 
                   textDecoration: 'none'
                   }}>
-                  Camera Cabinet
+                  CAMERA CABINET
                 </Link>
               </Navbar.Brand>
               <Nav className="mr-auto">
@@ -132,8 +118,7 @@ const MainNavbar = ({ user, handleLogout }) => {
               </Nav>
             </Container>
           </Navbar>
-        </Font>
-      </NavBackground>
+        </CamCabFont>
     </>
   )
 }
