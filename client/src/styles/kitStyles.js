@@ -8,6 +8,28 @@ export const ImageContainer = styled.div`
   margin: 30px 0 0 0;;
 `;
 
+export const HeaderContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  h1 {
+    color: white;
+    font-size: 40px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+  }
+  p {
+    color: #606060;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    padding: 5px 0 10px 0;
+    text-align: center;
+  }
+
+`
+
 export const ContentContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -49,10 +71,8 @@ export const Button = styled.button`
 `;
 
 export const KitListContainer = styled.div`
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  padding-top: 80px;
+  padding-top: 50px;
 `;
 
 export const Font = styled.div`
@@ -89,6 +109,7 @@ export const Img = styled.img`
 
 export const Header1 = styled.div`
   color: White;
+  text-align: center;
   font-size: 40px;
   font-family: 'Roboto', sans-serif;
   font-weight: bold;

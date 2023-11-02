@@ -1,15 +1,15 @@
-import { CamFlex, LogoFlex, Flex, Hflex, Pflex, TextContainer, Img } from '../../styles/homePageStyles';
+import { CamImg, LogoFlex, Flex, Hflex, Pflex, TextContainer, Img } from '../../styles/homePageStyles';
 
 const Home = ({}) => (
   <>
     <Flex>
       <TextContainer>
-        <Hflex> Camera Cabinet </Hflex>
-        <Pflex> Make sure you know what gear you have so <br /> you don't forget the essentials at your next <br />shoot. Sign up today, it's free! </Pflex>
+        <h2> Camera Cabinet </h2>
+        <p> Make sure you know what gear you have so <br /> you don't forget the essentials at your next <br />shoot. Sign up today, it's free! </p>
       </TextContainer>
-      <CamFlex>
-        <Img src='/assets/images/camcab.jpeg' alt="logo" style={{width:'350px', height:'350px', borderRadius:'5px'}}/>
-      </CamFlex>
+      <CamImg>
+        <img src='/assets/images/camcab.jpeg' alt="logo"/>
+      </CamImg>
     </Flex>
 
     <LogoFlex>

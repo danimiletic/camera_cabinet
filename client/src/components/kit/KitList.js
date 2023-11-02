@@ -12,7 +12,7 @@ const KitList = ({ kits }) => {
 								</Link>
 							)}
 						</Flex>
-					</Font>
+					</Font>  
     	)
 		}
 
