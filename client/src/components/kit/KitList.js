@@ -6,7 +6,7 @@ const KitList = ({ kits }) => {
 					<Font>
 						<Flex>
 							{ kits.map( k =>
-								<Link to={`/kits/${k.id}`} style={{ color: "#fe2712", textDecoration: 'none'}}>
+								<Link to={`/kits/${k.id}`} style={{ color: "#668DB1", textDecoration: 'none'}}>
 									<Img src={k.image} style={{ width: '400px', borderRadius: '5px'}}></Img>
 									<p>{k.name}</p>
 								</Link>

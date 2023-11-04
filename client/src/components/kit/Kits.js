@@ -24,7 +24,7 @@ const Kits = ({ kits, getAllKits, addKit }) => {
 								YOUR KITS
 							</h1>
 							<p>
-								The easy way to remember what you will take to your adventures.
+								The easy way to remember what you will take on your adventures.
 							</p> 
 							<Button onClick={handleShow}>
 								Add Kit

@@ -27,14 +27,14 @@ export const MainContainer = styled.div`
 export const Button = styled.button`
   background: none;
   border-radius: 3px;
-  border: 1px solid #fe2712;
+  border: 1px solid #668DB1;
   margin: 2px;
-  color: #fe2712;
+  color: #668DB1;
   font-family: 'Roboto', sans-serif;
   font-size: 15px;
 
   :hover {
-    background: #fe2712;
+    background: #668DB1;
     color: white;
     transition: 0.5s ease;
   }

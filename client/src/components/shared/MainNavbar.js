@@ -2,7 +2,7 @@
 import { AuthConsumer } from '../../providers/AuthProvider';
 import { Link } from 'react-router-dom';
 import { Navbar, Container, Nav } from 'react-bootstrap';
-import { Font, CamCabFont } from '../../styles/navbarStyles';
+import { Font, CamCabFont, Background } from '../../styles/navbarStyles';
 
 const MainNavbar = ({ user, handleLogout }) => {
 
@@ -14,9 +14,11 @@ const MainNavbar = ({ user, handleLogout }) => {
             <Font>
               <Nav.Link>
                 <Link to='/profile' 
+                  id='profileBtn'
                   style={{ 
-                  color: "#fe2712", 
-                  textDecoration: 'none'
+                  color: "#668DB1", 
+                  textDecoration: 'none',
+                  fontFamily: 'montserrat',
                   }}>
                     Profile
                 </Link>
@@ -25,9 +27,12 @@ const MainNavbar = ({ user, handleLogout }) => {
             <Font>
               <Nav.Link>
                 <Link to='/kits'
+                  id='kitsBtn'
                   style={{ 
-                  color: "#fe2712", 
-                  textDecoration: 'none'
+                  color: "#668DB1", 
+                  textDecoration: 'none',
+
+                  fontFamily: 'montserrat',
                   }}>
                     Kits
                 </Link>
@@ -36,9 +41,11 @@ const MainNavbar = ({ user, handleLogout }) => {
             <Font>
               <Nav.Link>
                 <Link to='/about' 
+                  id='aboutBtn'
                   style={{ 
-                  color: "#fe2712", 
-                  textDecoration: 'none'
+                  color: "#668DB1", 
+                  textDecoration: 'none',
+                  fontFamily: 'montserrat',
                   }}>
                     About Us
                 </Link>
@@ -58,9 +65,11 @@ const MainNavbar = ({ user, handleLogout }) => {
           <Font>
             <Nav.Link onClick={ () => handleLogout() }>
               <Link to="/logout" 
+                id='logoutBtn'
                 style={{ 
-                color: "#fe2712", 
-                textDecoration: 'none'
+                color: "#668DB1", 
+                textDecoration: 'none',
+                fontFamily: 'montserrat',
                 }}>
                 Logout
               </Link>
@@ -75,10 +84,13 @@ const MainNavbar = ({ user, handleLogout }) => {
             <Font>
               <Nav.Link>
                 <Link to='/login' 
+                  id='loginBtn'
                   style={{ 
-                  color: "#fe2712", 
-                  textDecoration: 'none'
+                  color: "#668DB1", 
+                  textDecoration: 'none',
+                  fontFamily: 'montserrat',
                   }}>
+                    
                     Login
                 </Link>
               </Nav.Link>
@@ -86,9 +98,11 @@ const MainNavbar = ({ user, handleLogout }) => {
             <Font>
               <Nav.Link>
                 <Link to='/register' 
+                  id='registerBtn'
                   style={{ color: 
-                  "#fe2712", 
-                  textDecoration: 'none'
+                  "#668DB1", 
+                  textDecoration: 'none',
+                  fontFamily: 'montserrat',
                   }}>
                     Register
                 </Link>
@@ -101,13 +115,15 @@ const MainNavbar = ({ user, handleLogout }) => {
 
   return (
     <>
+        <Background>
         <CamCabFont>
           <Navbar variant="light">
             <Container>
               <Navbar.Brand className="mr-auto">
                 <Link to="/" 
+                  id='camcabText'
                   style={{ 
-                  color: "#fe2712", 
+                  color: "#668DB1", 
                   textDecoration: 'none'
                   }}>
                   CAMERA CABINET
@@ -119,6 +135,7 @@ const MainNavbar = ({ user, handleLogout }) => {
             </Container>
           </Navbar>
         </CamCabFont>
+        </Background>
     </>
   )
 }

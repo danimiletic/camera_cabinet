@@ -15,7 +15,7 @@ export const HeaderContainer = styled.div`
   align-items: center;
   margin: auto;
   h1 {
-    color: white;
+    color: #668DB1;
     font-size: 40px;
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
@@ -57,14 +57,14 @@ export const ButtonContainer = styled.div`
 export const Button = styled.button`
   background: none;
   border-radius: 3px;
-  border: 1px solid #fe2712;
+  border: 1px solid #668DB1;
   margin: 2px;
-  color: #fe2712;
+  color: #668DB1;
   font-family: 'Robotot', sans-serif;
   font-size: 15px;
 
   :hover {
-    background: #fe2712;
+    background: #668DB1;
     color: white;
     transition: 0.5s ease;
   }
@@ -129,7 +129,7 @@ export const Header4 = styled.div`
 `;
 
 export const Para1 = styled.div`
-  color: #606060;
+  color:  ;
   text-align: center;
   font-family: 'Roboto', sans-serif;
   padding: 5px 0 20px 0;

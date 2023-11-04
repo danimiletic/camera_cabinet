@@ -72,7 +72,11 @@ const Register = ({ handleRegister }) => {
             required
             />
           </Form.Group>
-          <Button variant="outline-light" type="submit">
+          <Button 
+            variant="outline-light" 
+            type="submit"
+            id="submitBtn"
+            >
             Submit
           </Button>
         </Form>

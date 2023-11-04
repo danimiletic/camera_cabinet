@@ -39,7 +39,7 @@ export const Flex = styled.div`
   h2 {
     font-size: 40px;
     font-family: 'Montserrat', sans-serif;
-    color: white;
+    color: #668DB1;
     padding-bottom: 5px;
     @media (max-width: 530px) {
       font-size: 35px;

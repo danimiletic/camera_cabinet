@@ -33,7 +33,7 @@ export const Container = styled.div`
   justify-content: center;
 `;
 export const Header1 = styled.div`
-  color: white;
+  color: #668DB1;
   font-size: 40px;
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
@@ -41,7 +41,7 @@ export const Header1 = styled.div`
   text-align: center;
 `;
 export const Header2 = styled.div`
-  color: white;
+  color: #668DB1;
   font-size: 40px;
   font-family: 'Roboto', sans-serif;
   font-weight: bold;

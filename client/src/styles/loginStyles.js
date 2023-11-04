@@ -26,21 +26,21 @@ export const Container = styled.div`
 export const LoginContainer = styled.div`
   padding: 50px;
   border-radius: 5px;
-  border: 1px solid white;
+  border: 1px solid #606060;
 `;
 
 export const Button = styled.button`
   background: none;
   border-radius: 5px;
-  border: 2px solid #fe2712;
+  border: 2px solid #668DB1;
   width: 5rem;
   margin: 2px;
-  color: #fe2712;
+  color: #668DB1;
   font-family: 'Robotot', sans-serif;
   font-size: 18px;
 
   :hover {
-    background: #fe2712;
+    background: #668DB1;
     color: white;
     transition: 0.5s ease;
   }
