@@ -40,12 +40,16 @@ return (
         </ImageContainer>   
         <ButtonContainer>
           <Button 
-             onClick={() => handleShow(true)}>
+             onClick={() => handleShow(true)}
+             id="editBtn"
+             >
              Edit
            </Button>
            &nbsp;
            <Button 
-             onClick={() => deleteKit(id)}>
+             onClick={() => deleteKit(id)}
+             id="deleteBtn"
+             >
              Delete
           </Button>
         </ButtonContainer>

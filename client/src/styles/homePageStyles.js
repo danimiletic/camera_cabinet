@@ -36,11 +36,26 @@ export const Flex = styled.div`
   `;
   
   export const TextContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   h2 {
-    font-size: 40px;
+    font-size: 60px;
     font-family: 'Montserrat', sans-serif;
     color: #668DB1;
     padding-bottom: 5px;
+    @media (max-width: 1399px) {
+      font-size: 55px;
+    }
+    @media (max-width: 1199px) {
+      margin-top: 20px;
+      font-size: 45px;
+    }
+    @media (max-width: 767px) {
+      margin-top: 30px;
+      font-size: 40px;
+    }
     @media (max-width: 530px) {
       font-size: 35px;
     }
@@ -48,13 +63,16 @@ export const Flex = styled.div`
   p {
     color: #828282;
     font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    @media (max-width: 767px) {
+      font-size: 15px;
+    }
     @media (max-width: 530px) {
       font-size: 12px;
     }
   }
   @media (max-width: 1199px) {
-    text-align: center;
-    padding-bottom: 18px;
+  padding-bottom: 18px;
   }
 `;
 

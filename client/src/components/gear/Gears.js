@@ -22,7 +22,7 @@ const Gears = ({ gears, getAllGears, addGear, kitId }) => {
   return (
     <>
 			<Header1 style={{ 
-				color: "white",
+				color: "#668DB1",
 				}}>
 				Camera Parts
 			</Header1>
@@ -43,7 +43,12 @@ const Gears = ({ gears, getAllGears, addGear, kitId }) => {
 			<GearList gears={gears} kitId={params.kitId} />
 
 			<ButtonContainer>
-				<Button onClick={(handleShow)}>Add Gear</Button>
+				<Button 
+					onClick={(handleShow)}
+					id="addGearBtn"
+					>
+					Add Gear
+				</Button>
 			</ButtonContainer>
 			{/* { adding ?
 					<>

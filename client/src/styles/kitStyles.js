@@ -108,7 +108,7 @@ export const Img = styled.img`
 `
 
 export const Header1 = styled.div`
-  color: White;
+  color: #668DB1;
   text-align: center;
   font-size: 40px;
   font-family: 'Roboto', sans-serif;
